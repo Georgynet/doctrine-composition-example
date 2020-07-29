@@ -21,6 +21,11 @@ class AbstractRepository implements Selectable
         $this->entityName = $entityName;
     }
 
+    public function matching(Criteria $criteria)
+    {
+        $this->getRepo()->matching($criteria);
+    }
+
     protected function getEntityManager(): EntityManager
     {
         return $this->entityManager;
@@ -29,10 +34,5 @@ class AbstractRepository implements Selectable
     protected function getRepo(): EntityRepository
     {
         return $this->entityManager->getRepository($this->entityName);
-    }
-
-    public function matching(Criteria $criteria)
-    {
-        $this->getRepo()->matching($criteria);
     }
 }
