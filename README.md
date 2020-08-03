@@ -1,7 +1,7 @@
 ## Config
 DB-Connection anpassen ```\mezzio\config\autoload\development.local.php.dist```
 
-##Domain
+## Domains
 http://doctrine-example.local/
 http://doctrine-example.local:8080/ - adminer
 
