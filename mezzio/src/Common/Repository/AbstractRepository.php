@@ -23,7 +23,7 @@ class AbstractRepository implements Selectable
 
     public function matching(Criteria $criteria)
     {
-        $this->getRepo()->matching($criteria);
+        return $this->getRepo()->matching($criteria);
     }
 
     protected function getEntityManager(): EntityManager
